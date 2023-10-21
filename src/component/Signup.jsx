@@ -14,8 +14,8 @@ function SignUp() {
     localStorage.setItem("username", name);
     localStorage.setItem("useremail", email);
     navigate("/")
-    console.log(email);
-    console.log(password);
+    // console.log(email);
+    // console.log(password);
   };
 
   return (

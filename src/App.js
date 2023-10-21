@@ -2,12 +2,11 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
   Routes,
 } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import SignUp from "./component/Signup";
-import Login from "./component/Login";
+// import Login from "./component/Login";
 import Home from "./screen/Home";
 import './App.css';
 

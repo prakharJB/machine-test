@@ -67,24 +67,28 @@ function Home() {
         <h1>{userName}</h1>
         <div className="task-form">
           <input
+          className="rounded"
             type="text"
             placeholder="Add a new task"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           />
-          <button onClick={handleAddTask}>Add Task</button>
+          <button className="btn btn-success" onClick={handleAddTask}>Add Task</button>
         </div>
-        <ul className="task-list">
+        <ul className="task-list mt-4">
           {tasks.map((task) => (
             <li key={task.id}>
+                
               <input
+              className="mx-2"
                 type="checkbox"
                 checked={task.completed}
                 onChange={() => handleToggleCompletion(task.id)}
               />
-              {task.title}
-              <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
+              {task?.title}
+              <button className="mx-2 btn btn-danger" onClick={() => handleDeleteTask(task.id)}>Delete</button>
               <button
+              className="mx-2 btn btn-primary"
                 onClick={() => {
                   const newTitle = prompt("Edit task:", task.title);
                   if (newTitle !== null) {
